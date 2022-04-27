@@ -4,7 +4,7 @@ console.log(giphyAPIurl);
 let userInput=$("input").val(); 
 //let newURL= `https://api.giphy.com/v1/gifs/search?q=${userInput}&rating=pg&api_key=tTVMCPwEb1NapUWHla1pBNt4jKlfEqo1`;
 let randNum = Math.floor(Math.random() * 49);
-
+console.log(randNum);
 
 $(".search-button").click(function() {
   fetch(giphyAPIurl)
@@ -13,6 +13,9 @@ $(".search-button").click(function() {
     .then(function(response) {
             console.log(response);
             return response.json();
+    return response(Math.random()*48);
+    
+            
     
   })
     
